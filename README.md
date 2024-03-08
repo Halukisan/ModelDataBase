@@ -9,7 +9,7 @@ Es和向量数据库Milvus的构建与数据存储
 6. **插入数据**：以单个文件为单位插入向量数据库中以保证数据的一致性......
 
 ### 内容
-Milvus是向量数据库模型构建，EsServiceImpl是Es的构建，存储清理后的训练数据，检查查询效率，MilvusServiceImpl中存放向量数据库的构建代码。MilvusIndexConstans中是向量数据库的结构设计。embedding中是调用的专门计算embedding的小模型
+Milvus是向量数据库模型构建，EsServiceImpl是Es的构建，存储清理后的训练数据，检查查询效率，MilvusServiceImpl中存放向量数据库的构建代码。MilvusIndexConstans中是向量数据库的结构设计。embedding中是调用的专门计算embedding的小模型，对外提供接口，供java后端调用。
 ### Milvus
 向Milvus向量数据库存储大模型问答对信息，python存储设置HNSW索引，对问题描述构建向量，修改索引参数但提升效果并不明显。调研发现，在少量不足百万数据下，构建合适的分区可以提升查询速度。
 ### ElasticSearch
